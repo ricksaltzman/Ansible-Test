@@ -1,0 +1,6 @@
+[targets]
+ricks-host  ansible_host=3.217.15.76
+
+[targets:vars]
+ansible_user                    = rick
+ansible_ssh_pass                = ricks-password

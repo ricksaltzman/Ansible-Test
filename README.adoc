@@ -1,0 +1,18 @@
+== Getting started
+
+. Amend the `hosts` file with your correct IP and login details
++
+[source,bash]
+----
+[targets]
+ricks-host  ansible_host=3.217.15.76
+
+[targets:vars]
+ansible_user                    = rick
+ansible_ssh_pass                = ricks-password
+----
+. Test it with `ansible targets -m ping` BTW this is an ssh handshake not a ICMP
+ping.
+
+. Test it with `ansible-playbook main.yml`
+

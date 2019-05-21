@@ -1,0 +1,21 @@
+---
+- name: deploy apache
+  hosts: targets
+  gather_facts: false
+  become: true
+
+  tasks:
+    - name: Apache present on web servers
+      yum:
+        name: httpd
+        state: latest
+
+    - name: Apache enabled at boot
+      service:
+        name: httpd
+        enabled: yes
+        
+    - name: Apache started
+      service:
+        name: httpd
+        state: started
