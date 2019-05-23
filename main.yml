@@ -1,6 +1,6 @@
 ---
 - name: deploy apache
-  hosts: targets
+  hosts: ricks-host
   gather_facts: false
   become: true
 

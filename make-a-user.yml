@@ -1,0 +1,15 @@
+---
+- name: deploy apache
+  hosts: ricks-host
+  gather_facts: false
+  become: true
+  vars:
+    user_name: tok
+    user_state: present
+
+  tasks:
+
+    - name: "Create a new user called {{ user_name }}"
+      user:
+        name: "{{ user_name }}"
+        state: "{{ user_state }}"
